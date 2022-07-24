@@ -1,0 +1,94 @@
+@import "../../themes/variable";
+
+.header {
+  position: relative;
+  z-index: 1;
+  .container {
+    max-width: 1260px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    .logo {
+      margin-right: 100px;
+      img {
+        width: 80px;
+      }
+    }
+    .navbar {
+      margin-left: 150px;
+      a {
+        text-decoration: none;
+        padding: 0 50px 0 0;
+        @include text();
+
+        &:hover {
+          color: $text-c1-primary;
+        }
+      }
+    }
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .contact__button {
+        margin-right: 20px;
+        a {
+          .btn-contact {
+            box-shadow: 0 0 0 3em #b61984 inset;
+            align-items: center;
+            @include button ($text-base, $text-semibold, $text-c1-light, $bg-transparent, 12px 22px, none, 50px, $bg-transparent, $text-c1-primary, 1px solid #b61984);
+
+            transition: all 300ms ease;
+            &:hover {
+              box-shadow: 0 0 0 1px inset;
+            }
+            p {
+              font-size: 13px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .contact__socials {
+        a {
+          @include text($text-xs, $text-regular, $text-c1-dark);
+          margin-left: 5px;
+          text-decoration: none;
+
+          &:hover {
+            color: $text-c1-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel {
+  position: absolute;
+  // display: block;
+  top: 0;
+  img {
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    width: 100%;
+  }
+  .container {
+    .detail {
+      .title {
+
+      }
+      .des-title {
+
+      }
+    }
+    .thumbnail {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
