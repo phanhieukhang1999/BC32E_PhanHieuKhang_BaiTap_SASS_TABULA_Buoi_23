@@ -4,12 +4,9 @@
   position: relative;
   z-index: 1;
   .container {
-    max-width: 1260px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
     .logo {
       margin-right: 100px;
       img {
@@ -38,7 +35,18 @@
           .btn-contact {
             box-shadow: 0 0 0 3em #b61984 inset;
             align-items: center;
-            @include button ($text-base, $text-semibold, $text-c1-light, $bg-transparent, 12px 22px, none, 50px, $bg-transparent, $text-c1-primary, 1px solid #b61984);
+            @include button(
+              $text-base,
+              $text-semibold,
+              $text-c1-light,
+              $bg-transparent,
+              12px 22px,
+              none,
+              50px,
+              $bg-transparent,
+              $text-c1-primary,
+              1px solid #b61984
+            );
 
             transition: all 300ms ease;
             &:hover {
@@ -67,27 +75,90 @@
 }
 
 .carousel {
-  position: absolute;
+  position: relative;
   // display: block;
   top: 0;
-  img {
-    // position: absolute;
-    // left: 0;
-    // right: 0;
+  .carousel-top {
+    position: absolute;
+    left: 0;
+    top: -200px;
     width: 100%;
   }
   .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
     .detail {
+      width: 50%;
+      margin-top: 55px;
       .title {
-
+        @include text($text-base, $text-semibold, $text-c1-primary);
+        margin-bottom: 0;
       }
       .des-title {
-
+        @include text($text-6xl, $text-bold, $text-c1-dark);
       }
     }
     .thumbnail {
+      width: 50%;
+      top: -160px;
+      position: absolute;
+      right: 0;
       img {
         width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+  .carousel-bottom {
+    width: 100%;
+  }
+}
+
+.content {
+  position: relative;
+  background-color: $bg-c1-violet;
+  .container {
+    .row {
+      .col {
+        width: calc(100% / 4);
+        flex-basis: auto;
+        padding: 20px;
+        .card {
+          border: none;
+          border-radius: 10px;
+          overflow: hidden;
+          .card-body {
+            padding: 0;
+            .card-thumbnail {
+              img {
+                width: 100%;
+                &:hover {
+                  transform: scale3d(1, 1, 1);
+                  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+                  -moz-transform: scale3d(1.05, 1.05, 1.05);
+                  -ms-transform: scale3d(1.05, 1.05, 1.05);
+                  transition: transform 650ms ease-in-out,
+                    filter 650ms ease-in-out;
+                  -webkit-transition: transform 650ms ease-in-out,
+                    filter 650ms ease-in-out;
+                }
+              }
+            }
+            .card-detail {
+              padding: 20px;
+              text-align: center;
+              transition: all 300ms ease-in-out;
+              .card-title {
+                @include text($text-xs, $text-semibold, $text-c1-primary);
+              }
+              .card-info {
+                @include text($text-2xl, $text-bold, $text-c1-dark);
+              }
+            }
+          }
+        }
       }
     }
   }

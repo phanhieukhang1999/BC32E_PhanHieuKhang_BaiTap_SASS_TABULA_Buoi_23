@@ -5,18 +5,25 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.clear {
+  clear: both;
+}
+
+.container {
+  max-width: 1260px;
+  margin: auto;
+  padding: 0 30px;
+}
+
 /*-----text: css cho text ---------*/
 .header {
   position: relative;
   z-index: 1;
 }
 .header .container {
-  max-width: 1260px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
 }
 .header .container .logo {
   margin-right: 100px;
@@ -82,12 +89,90 @@
 }
 
 .carousel {
-  position: absolute;
+  position: relative;
   top: 0;
 }
-.carousel img {
+.carousel .carousel-top {
+  position: absolute;
+  left: 0;
+  top: -200px;
   width: 100%;
+}
+.carousel .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+}
+.carousel .container .detail {
+  width: 50%;
+  margin-top: 55px;
+}
+.carousel .container .detail .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #b61984;
+  margin-bottom: 0;
+}
+.carousel .container .detail .des-title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #000;
+}
+.carousel .container .thumbnail {
+  width: 50%;
+  top: -160px;
+  position: absolute;
+  right: 0;
 }
 .carousel .container .thumbnail img {
   width: 100%;
+  margin-top: 20px;
+}
+.carousel .carousel-bottom {
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  background-color: #dcd1f3;
+}
+.content .container .row .col {
+  width: 25%;
+  flex-basis: auto;
+  padding: 20px;
+}
+.content .container .row .col .card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.content .container .row .col .card .card-body {
+  padding: 0;
+}
+.content .container .row .col .card .card-body .card-thumbnail img {
+  width: 100%;
+}
+.content .container .row .col .card .card-body .card-thumbnail img:hover {
+  transform: scale3d(1, 1, 1);
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  -moz-transform: scale3d(1.05, 1.05, 1.05);
+  -ms-transform: scale3d(1.05, 1.05, 1.05);
+  transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+  -webkit-transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+}
+.content .container .row .col .card .card-body .card-detail {
+  padding: 20px;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+.content .container .row .col .card .card-body .card-detail .card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #b61984;
+}
+.content .container .row .col .card .card-body .card-detail .card-info {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
 }
