@@ -25,7 +25,7 @@
         }
       }
     }
-    .contact {
+    .header__contact {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -120,6 +120,8 @@
   position: relative;
   background-color: $bg-c1-violet;
   .container {
+    z-index: 3;
+    position: relative;
     .row {
       .col {
         width: calc(100% / 4);
@@ -129,8 +131,13 @@
           border: none;
           border-radius: 10px;
           overflow: hidden;
+          &:hover {
+            box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+            transition: all 300ms ease-in-out;
+          }
           .card-body {
             padding: 0;
+
             .card-thumbnail {
               img {
                 width: 100%;
@@ -160,6 +167,165 @@
           }
         }
       }
+    }
+  }
+  .img-bottom {
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+}
+
+.contact {
+  padding-top: 60px;
+  position: relative;
+  .container {
+    z-index: 5;
+    position: relative;
+    .row {
+      .contact-img {
+        width: 50%;
+        margin-left: 100px;
+        img {
+          width: 80%;
+        }
+      }
+      .card {
+        width: 33%;
+        height: 460px;
+        border: none;
+        .card-body {
+          border-radius: 10px;
+          box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+          .title {
+            @include text($text-4xl, $text-bold, $text-c1-dark);
+            margin-bottom: 40px;
+          }
+          .contact-row-1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .contact-name {
+              display: flex;
+              align-items: center;
+              width: 45%;
+              border: 1px solid #ccc;
+              border-radius: 50px;
+              padding: 12px;
+              font-size: 13px;
+              i {
+                color: #b61984;
+                margin-right: 10px;
+              }
+              .name {
+                border: none;
+                width: 40%;
+                &:focus-visible {
+                  outline: none;
+                }
+              }
+            }
+            .contact-email {
+              display: flex;
+              align-items: center;
+              width: 45%;
+              border: 1px solid #ccc;
+              border-radius: 50px;
+              padding: 12px;
+              font-size: 13px;
+              i {
+                color: #b61984;
+                margin-right: 10px;
+              }
+              .email {
+                width: 40%;
+                border: none;
+                &:focus-visible {
+                  outline: none;
+                }
+              }
+            }
+          }
+          .contact-row-2 {
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 8px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            .contact-course {
+              i {
+                padding: 0 2px;
+                color: #b61984;
+              }
+              .list {
+                border: none;
+                width: 310px;
+                &:focus-visible {
+                  outline: none;
+                }
+              }
+            }
+          }
+          .contact-row-3 {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            .contact-massage {
+              display: flex;
+              align-items: baseline;
+              padding: 12px 0 0 12px;
+              font-size: 13px;
+              i {
+                color: #b61984;
+                margin-right: 6px;
+              }
+              .message {
+                border: none;
+                height: 60px;
+                width: 100%;
+                &:focus-visible {
+                  outline: none;
+                }
+              }
+            }
+          }
+          .contact-button {
+            .btn-contact {
+              box-shadow: 0 0 0 3em #b61984 inset;
+            align-items: center;
+            @include button(
+              $text-xs,
+              $text-semibold,
+              $text-c1-light,
+              $bg-transparent,
+              12px 60px,
+              none,
+              50px,
+              $bg-transparent,
+              $text-c1-primary,
+              1px solid #b61984
+            );
+
+            transition: all 300ms ease;
+            &:hover {
+              box-shadow: 0 0 0 1px inset;
+            }
+            }
+          }
+        }
+      }
+    }
+  }
+  .img-bottom {
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    bottom: 0px;
+    // width: 100%;
+    img {
+      width: 100%;
     }
   }
 }
