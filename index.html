@@ -29,18 +29,29 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body>
     <header class="header">
+      <div id="toggle">
+        <i class="fa-solid fa-bars"></i>
+        <img src="./img/crest.png" alt="..." />
+      </div>
       <div class="container">
         <a class="logo" href="#">
           <img src="./img/crest.png" alt="..." />
         </a>
+
         <div class="navbar">
           <a href="#">Home</a>
-          <a href="#">About</a>
+          <a class="active" href="#">About</a>
           <a href="#">Courses</a>
           <a href="#">Blog</a>
           <a href="#">Shop</a>
@@ -79,11 +90,13 @@
     <section class="carousel">
       <img class="carousel-top" src="./img/yellow_top_wave_01.png" alt="..." />
       <div class="container">
-        <div class="detail">
+        <div class="detail animate__animated animate__fadeInLeft">
           <h1 class="title">ABOUT US</h1>
           <p class="des-title">The language teaching experts</p>
         </div>
-        <div class="thumbnail">
+        <div
+          class="thumbnail animate__animated animate__fadeIn animate__delay-1s"
+        >
           <img src="./img/hero_team.png" alt="..." />
         </div>
       </div>
@@ -94,14 +107,14 @@
       />
     </section>
 
-    <div class="clear"></div>
-
     <!-- Content -->
     <section class="content">
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="card">
+            <div
+              class="card animate__animated animate__fadeIn animate__delay-1s"
+            >
               <div class="card-body">
                 <div class="card-thumbnail">
                   <img src="./img/teacher_1.jpg" alt="..." />
@@ -118,7 +131,9 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div
+              class="card animate__animated animate__fadeIn animate__delay-2s"
+            >
               <div class="card-body">
                 <div class="card-thumbnail">
                   <img src="./img/teacher_2.jpg" alt="..." />
@@ -135,7 +150,9 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div
+              class="card animate__animated animate__fadeIn animate__delay-3s"
+            >
               <div class="card-body">
                 <div class="card-thumbnail">
                   <img src="./img/teacher_3.jpg" alt="..." />
@@ -152,7 +169,9 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div
+              class="card animate__animated animate__fadeIn animate__delay-4s"
+            >
               <div class="card-body">
                 <div class="card-thumbnail">
                   <img src="./img/teacher_4.jpg" alt="..." />
@@ -169,7 +188,9 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div
+              class="card animate__animated animate__fadeIn animate__delay-1s"
+            >
               <div class="card-body">
                 <div class="card-thumbnail">
                   <img src="./img/teacher_5.jpg" alt="..." />
@@ -186,7 +207,9 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div
+              class="card animate__animated animate__fadeIn animate__delay-2s"
+            >
               <div class="card-body">
                 <div class="card-thumbnail">
                   <img src="./img/teacher_6.jpg" alt="..." />
@@ -203,7 +226,9 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div
+              class="card animate__animated animate__fadeIn animate__delay-3s"
+            >
               <div class="card-body">
                 <div class="card-thumbnail">
                   <img src="./img/teacher_7.jpg" alt="..." />
@@ -220,7 +245,9 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div
+              class="card animate__animated animate__fadeIn animate__delay-4s"
+            >
               <div class="card-body">
                 <div class="card-thumbnail">
                   <img src="./img/teacher_8.jpg" alt="..." />
@@ -239,7 +266,11 @@
         </div>
       </div>
       <div class="img-bottom">
-        <img src="./img/Wave_White_bottom_right_shape_01.png" alt="..." />
+        <img
+          class="img-fluid"
+          src="./img/Wave_White_bottom_right_shape_01.png"
+          alt="..."
+        />
       </div>
     </section>
 
@@ -247,7 +278,7 @@
     <section class="contact">
       <div class="container">
         <div class="row">
-          <div class="contact-img">
+          <div class="contact-img animate__animated animate__fadeInLeft">
             <img src="./img/conatct_inner.png" alt="..." />
           </div>
           <div class="card">
@@ -295,26 +326,124 @@
         </div>
       </div>
       <div class="img-bottom">
-        <img src="./img/accent_bottom_wave_01.png" alt="...">
+        <img src="./img/accent_bottom_wave_01.png" alt="..." />
       </div>
     </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col animate__animated animate__fadeIn animate__delay-1s">
+            <div class="item-1">
+              <h3 class="title">Contact us</h3>
+              <ul class="list">
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>Franklin St, Greenpoint Ave</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone-flip"></i>
+                  <p>+2342 5446 67</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-clock"></i>
+                  <p>Monday - Friday: 8 AM - 5 PM</p>
+                </li>
+              </ul>
+              <div class="footer__socials">
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col animate__animated animate__fadeIn animate__delay-2s">
+            <div class="item-2">
+              <h3 class="title">Quick Links</h3>
+              <ul class="list">
+                <li><a href="#">Home</a></li>
+                <hr />
+                <li><a href="#">Course</a></li>
+                <hr />
+
+                <li><a href="#">Schedule</a></li>
+                <hr />
+
+                <li><a href="#">Blog</a></li>
+                <hr />
+              </ul>
+            </div>
+          </div>
+          <div class="col animate__animated animate__fadeIn animate__delay-3s">
+            <div class="item-2">
+              <h3 class="title">About</h3>
+              <ul class="list">
+                <li><a href="#">About us</a></li>
+                <hr />
+                <li><a href="#">Events</a></li>
+                <hr />
+
+                <li><a href="#">Get Quote</a></li>
+                <hr />
+
+                <li><a href="#">Contact</a></li>
+                <hr />
+              </ul>
+            </div>
+          </div>
+          <div class="col animate__animated animate__fadeIn animate__delay-4s">
+            <div class="item-3">
+              <h3 class="title">Newsletter</h3>
+              <input class="text-mail" type="email" placeholder="Your email" />
+              <button class="btn-subscribe">SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop()) {
+            $("header").addClass("sticky");
+          } else {
+            $("header").removeClass("sticky");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#toggle").click(function () {
+          $(".navbar").slideToggle(), $(".header__contact").slideToggle();
+        });
+      });
+    </script>
   </body>
+</html>
+
 </html>
