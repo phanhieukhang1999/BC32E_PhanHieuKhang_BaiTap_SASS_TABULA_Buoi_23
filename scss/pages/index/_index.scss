@@ -11,8 +11,8 @@
 
   #toggle {
     padding: 10px;
-    font-size: 20px;
-    background-color: #fff;
+    font-size: $text-2xl;
+    background-color: $bg-c1-light;
     width: 100%;
     cursor: pointer;
     display: none;
@@ -105,7 +105,7 @@
   }
 }
 .header.sticky {
-  background-color: #fff;
+  background-color: $bg-c1-light;
   box-shadow: 0 0 10px 0 rgb(204 204 204 / 50%);
   width: 100%;
   .container {
